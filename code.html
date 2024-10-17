@@ -1,0 +1,364 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NETFLIX</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+                           
+    #city-section {
+        text-align: center;
+        margin: 20px 0;
+        position: absolute;
+        background-color:black;
+    top: 10%; /* Center vertically */
+    left: 150%; /* Center horizontally */
+    transform: translate(-50%, -50%); /* Adjust for true center */
+    color:transparent;
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 5px;
+    }
+
+      .netflix{
+        width: 1440px;
+height: 810px;
+gap: 0px;
+opacity: 0px;
+      }
+      .overlay-text {
+        font-family: Roboto;
+font-size: 45px;
+font-weight: 900;
+line-height: 35px;
+text-align: center;
+
+    position: absolute;
+    width: 643px;
+height: 160px;
+top: 550px;
+left: 398px;
+right:398px;
+gap: 0px;
+opacity: 0px;
+bottom:0px;
+align
+    transform: translate(-50%, -50%); /* Center vertically */
+    color: white; /* Text color */
+    font-size: 24px; /* Adjust size */
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.7); /* Optional shadow for readability */
+}
+p{
+    font-weight: bold;
+}
+.text{
+    position:absolute;
+    width: 452px;
+height: 50px;
+top: 417px;
+left: 494px;
+gap: 0px;
+opacity: 0px;
+text-align:center;
+font-family: Roboto;
+font-size: 32px;
+font-weight: 400;
+line-height: 70px;
+text-align: center;
+
+    transform: translate(-50%, -50%); /* Center vertically */
+    color: white; /* Text color */
+    font-size: 24px; /* Adjust size */
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.7); /* Optional shadow for readability */
+}
+.user-options{
+            position: absolute; /* Position relative to the image container */
+            top: 13%; /* Center vertically */
+            left: 173%; /* Center horizontally */
+            transform: translate(-50%, -50%); /* Offset by half its size */
+            padding: 10px 20px; /* Space inside the button */
+            background-color:red ; /* Button color */
+            color: red; /* Text color */
+            width:15%;
+            border: none; /* No border */
+            border-radius: 5px; /* Rounded corners */
+            text-decoration: none; /* Remove underline from the link */
+            font-size: 16px; /* Font size */
+            cursor: pointer; /* Pointer cursor on hover */
+        
+}
+
+.email {
+    margin-bottom: 15px;
+    position: absolute; /* Position relative to the image container */
+            top: 108%; /* Center vertically */
+            left: 50%; /* Center horizontally */
+            transform: translate(-50%, -50%); /* Offset by half its size */
+            padding: 10px 20px; /* Space inside the button */
+            background-color:black ; /* Button color */
+            color: red; /* Text color */
+            width:15%;
+            border: none; /* No border */
+            border-radius: 5px; /* Rounded corners */
+            text-decoration: none; /* Remove underline from the link */
+            font-size: 16px; /* Font size */
+            cursor: pointer; /* Pointer cursor on hover */
+}
+.getstarted{
+    margin-bottom: 15px;
+    position: absolute; /* Position relative to the image container */
+            top: 108%; /* Center vertically */
+            left: 60%; /* Center horizontally */
+            transform: translate(-50%, -50%); /* Offset by half its size */
+            padding: 10px 20px; /* Space inside the button */
+            background-color:red ; /* Button color */
+            color:white; /* Text color */
+            width:10%;
+            border: none; /* No border */
+            border-radius: 5px; /* Rounded corners */
+            text-decoration: none; /* Remove underline from the link */
+            font-size: 16px; /* Font size */
+            cursor: pointer; /* Pointer cursor on hover */
+}
+.Trending{
+    width: 198px;
+height: 80px;
+top: 893px;
+left: 900px;
+gap: 0px;
+padding-left: 200px;
+padding-top: 50px;
+
+opacity: 0px;
+color: white;
+}
+.movies{
+    width:198px;
+    padding-left: 198px;
+    
+    padding-bottom: 30px;
+    color:red;
+}
+.questions{
+    width: 397px;
+height: 38px;
+top: 1763px;
+left: 120px;
+gap: 0px;
+opacity: 0px;
+font-family: Roboto;
+font-size: 32px;
+font-weight: 400;
+line-height: 37.5px;
+text-align: left;
+color:#FFFFFF;
+}
+.faq-container {
+    max-width: 600px;
+    margin: auto;
+    background: #414141;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0);
+    padding: 20px;
+}
+.faq-item {
+    margin-bottom: 10px;
+}
+
+.faq-toggle {
+    display: none; /* Hide the checkbox */
+}
+
+.faq-question {
+    display: block;
+    padding: 15px;
+    background: color #414141;    ; /* Netflix red */
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.faq-answer {
+    display: none; /* Initially hidden */
+    padding: 15px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    margin-top: 5px;
+}
+
+.faq-toggle:checked + .faq-question {
+    background-color: #414141; /* Darker red when active */
+}
+
+.faq-toggle:checked + .faq-question + .faq-answer {
+    display: block; /* Show answer when checkbox is checked */
+}
+.line{
+    font-weight:lighter;
+
+
+
+}
+.image-container {
+            display: flex; /* Enable Flexbox */
+            justify-content: space-between; /* Space images evenly */
+            max-width: 800px; /* Set a max width for the container */
+            width: 100%; /* Full width */
+            padding-left: 40px;
+            gap:70px;
+            padding-bottom: 90px;
+        }
+        .white{
+            color: white;
+            padding-left: 35px;
+        }
+        .TV{
+            position: absolute; /* Position the text absolutely within the container */
+    top: 1500px; /* Center vertically */
+    left: 150px; /* Center horizontally */
+    transform: translate(-50%, -50%); /* Adjust position to center */
+    color: white; /* Text color */
+    font-size: 24px; /* Font size */
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7); 
+        }
+           .tvv{
+            position: absolute; /* Position the text absolutely within the container */
+    top: 1610px; /* Center vertically */
+    left: 183px; /* Center horizontally */
+    transform: translate(-50%, -50%); /* Adjust position to center */
+    color: white; /* Text color */
+    font-size: 18px; /* Font size */
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+           }
+           .download{
+            position: absolute; /* Position the text absolutely within the container */
+    top: 1500px; /* Center vertically */
+    left: 70%; /* Center horizontally */
+    transform: translate(-50%, -50%); /* Adjust position to center */
+    color: white; /* Text color */
+    font-size: 18px; /* Font size */
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+           }
+           .down{
+            position: absolute; /* Position the text absolutely within the container */
+    top: 1610px; /* Center vertically */
+    left: 515px; /* Center horizontally */
+    transform: translate(-50%, -50%); /* Adjust position to center */
+    color: white; /* Text color */
+    font-size: 18px; /* Font size */
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+           }
+    </style>
+
+</head>
+<body bgcolor="black">
+    <section id="city-section">
+        <label for="city-select"></label>
+        <select id="city-select">
+            <option value="all">English</option>
+            <option value="new-york">Hindi</option>
+            <option value="los-angeles">Marathi</option>
+            <option value="chicago">Spanish</option>
+            <option value="houston">French</option>
+            <option value="miami">Italian</option>
+        </select>
+    </section>
+    <button class="user-options">
+        <a href="signin.html">Sign In</a>
+
+    </button>
+    <div class="image-container">
+   <img class="netflix" src="main netflix.png">
+   <div class="overlay-text">Unlimited movies,<br> 
+    TV shows and more<br>
+    <p class="line">Starts at ₹149. Cancel any time.</p>
+   <p class="line3">Ready to watch? Enter your email to create or restart your membership.</p></div>
+   
+    <div class="email">
+        <input type="email" placeholder="Email address" class="email-input">
+</div>
+<button class="getstarted">Get Started</button>
+</div>
+   </div>
+ 
+   <div class="Trending">Trending Now</div>
+   <div class="movies"><section id="movies">
+    <label for="city-select"></label>
+    <select id="city-select">
+        <option value="all">Movies</option>
+        <option value="new-york">Series</option>
+        <option value="new-york">Documentaries</option>
+    </select>
+</section></div>
+   <div class="image-container">
+    <img src="1.png">
+    <img src="2.png">
+    <img src="3.png">
+    <img src="4.png">
+    <img src="5.png"></div>
+
+   <p class="white">More reasons to join</p>
+
+   <div class="image-container"> <img src="enjoy ur tv.png">
+   <p class="TV">Enjoy on your TV</p>
+   <p class="tvv">Watch on smart TVs, PlayStation,<br>
+    Xbox, Chromecast, Apple TV,<br>
+    Blu-ray players and more.</p>
+    <img src="enjoy ur tv.png">
+    <p class="download">Download your shows to watch offline</p>
+    <p class="down">Save your favorites easily and<br> always have something to watch.</p>
+    <img src="enjoy ur tv.png">
+    <img src="enjoy ur tv.png"></div>
+  
+
+   <div class="questions">Frequently Asked Questions</div>
+   <div class="faq-container">
+    <h2>Frequently Asked Questions</h2>
+
+    <div class="faq-item">
+        <input type="checkbox" id="faq1" class="faq-toggle">
+        <label for="faq1" class="faq-question">What is Netflix?</label>
+        <div class="faq-answer">
+            <p>Netflix is a streaming service that offers a wide variety of award-winning TV shows, movies, anime, and more.</p>
+        </div>
+    </div>
+
+    <div class="faq-item">
+        <input type="checkbox" id="faq2" class="faq-toggle">
+        <label for="faq2" class="faq-question">How much does Netflix cost?</label>
+        <div class="faq-answer">
+            <p>Netflix offers several subscription plans to choose from, starting from $8.99 per month.</p>
+        </div>
+    </div>
+
+    <div class="faq-item">
+        <input type="checkbox" id="faq3" class="faq-toggle">
+        <label for="faq3" class="faq-question">How can I cancel my subscription?</label>
+        <div class="faq-answer">
+            <p>You can cancel your subscription anytime through your account settings on the Netflix website or app.</p>
+        </div>
+    </div>
+
+    <div class="faq-item">
+        <input type="checkbox" id="faq4" class="faq-toggle">
+        <label for="faq4" class="faq-question">Can I watch Netflix on multiple devices?</label>
+        <div class="faq-answer">
+            <p>Yes, Netflix allows you to stream on multiple devices, depending on your subscription plan.</p>
+        </div>
+    </div>
+</div>
+<p>Ready to watch? Enter your email to create or restart your membership.</p>
+<div class="form-group">
+    <label for="email">Email:</label>
+    <input type="email" id="email" name="email" required>
+</div>
+<div class="get started"><button >Get Started</button>
+</div>
+   <footer>
+        <p>&copy; 2024 My Webpage</p>
+    </footer>
+</body>
+</html>
